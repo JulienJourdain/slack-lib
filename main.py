@@ -5,16 +5,12 @@ def main():
     
     # Args parser
     args = kaptenSlack.argsInit()
-
-    # Slack webhook
-    slack_webhook_url = kaptenSlack.webhookInit()
     
     # Generate a payload
     myPayload = kaptenSlack.createPayload(args.message, args.channel)
 
     # Send slack message
-    kaptenSlack.send(slack_webhook_url, myPayload)
-    
+    kaptenSlack.send(myPayload, webhook=slack_webhook_url)
 
 if __name__ == "__main__":
     main()
