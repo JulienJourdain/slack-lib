@@ -1,2 +1,1 @@
 # Slack-lib
-## Introduction
